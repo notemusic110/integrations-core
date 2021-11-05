@@ -116,7 +116,7 @@ See [service_checks.json][16] for a list of service checks provided by this inte
 
 If Istio proxy sidecar injection is enabled, monitoring other Prometheus metrics via the [Openmetrics integration][20] can result in high custom metrics usage and duplicated metric collection.
 
-To ensure that your Openmetrics configuration is not redundantly collecting metrics, either:
+To ensure that your Openmetrics configuration does not redundantly collect metrics, either:
 
 1. Use specific metric matching in the `metrics` configuration option, or
 2. If you use `*` value for `metrics`, consider using the following options to exclude metrics already collected by the Istio and Envoy integrations.
